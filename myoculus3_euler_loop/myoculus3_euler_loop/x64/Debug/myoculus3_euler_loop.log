@@ -1,0 +1,5 @@
+﻿  myoculus3_euler_loop.cpp
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(65): warning C4129: 'T': unrecognized character escape sequence
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(49): warning C4101: 'inputState': unreferenced local variable
+  myoculus3_euler_loop.vcxproj -> C:\Users\Peto\Documents\Visual Studio 2015\Projects\myoculus3_euler_loop\x64\Debug\myoculus3_euler_loop.exe
+  myoculus3_euler_loop.vcxproj -> C:\Users\Peto\Documents\Visual Studio 2015\Projects\myoculus3_euler_loop\x64\Debug\myoculus3_euler_loop.pdb (Full PDB)

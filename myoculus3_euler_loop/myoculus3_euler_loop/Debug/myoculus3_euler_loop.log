@@ -1,0 +1,124 @@
+﻿  myoculus3_euler_loop.cpp
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(21): error C2871: 'glm': a namespace with this name does not exist
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(25): error C2065: 'ovrResult': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(25): error C2146: syntax error: missing ';' before identifier 'result'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(25): error C2065: 'result': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(25): error C3861: 'ovr_Initialize': identifier not found
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(26): error C2065: 'result': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(26): error C3861: 'OVR_FAILURE': identifier not found
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(28): error C2065: 'ovrSession': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(28): error C2146: syntax error: missing ';' before identifier 'session'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(28): error C2065: 'session': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(29): error C2065: 'ovrGraphicsLuid': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(29): error C2146: syntax error: missing ';' before identifier 'luid'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(29): error C2065: 'luid': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(30): error C2065: 'result': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(30): error C2065: 'session': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(30): error C2065: 'luid': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(30): error C3861: 'ovr_Create': identifier not found
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(31): error C2065: 'result': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(31): error C3861: 'OVR_FAILURE': identifier not found
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(33): error C3861: 'ovr_Shutdown': identifier not found
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(37): error C2065: 'ovrHmdDesc': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(37): error C2146: syntax error: missing ';' before identifier 'desc'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(37): error C2065: 'desc': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(37): error C2065: 'session': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(37): error C3861: 'ovr_GetHmdDesc': identifier not found
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(39): error C2065: 'ovrSizei': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(39): error C2146: syntax error: missing ';' before identifier 'resolution'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(39): error C2065: 'resolution': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(39): error C2065: 'desc': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(39): error C2228: left of '.Resolution' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(39): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(40): error C2065: 'resolution': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(40): error C2228: left of '.w' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(40): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(40): error C2228: left of '.h' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(40): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(44): error C2065: 'ovrTrackingState': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(44): error C2146: syntax error: missing ';' before identifier 'state'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(44): error C2065: 'state': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(44): error C2065: 'session': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(44): error C3861: 'ovr_GetTimeInSeconds': identifier not found
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(44): error C2065: 'ovrTrue': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(44): error C3861: 'ovr_GetTrackingState': identifier not found
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(45): error C2065: 'state': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(45): error C2228: left of '.StatusFlags' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(45): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(45): error C2065: 'ovrStatus_OrientationTracked': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(45): error C2065: 'ovrStatus_PositionTracked': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(47): error C2065: 'ovrPosef': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(47): error C2146: syntax error: missing ';' before identifier 'pose'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(47): error C2065: 'pose': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(47): error C2065: 'state': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(47): error C2228: left of '.HeadPose' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(47): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(47): error C2228: left of '.ThePose' must have class/struct/union
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(49): error C2065: 'ovrQuatf': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(49): error C2146: syntax error: missing ';' before identifier 'o'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(49): error C2065: 'o': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(49): error C2065: 'pose': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(49): error C2228: left of '.Orientation' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(49): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(51): error C2065: 'ovrVector3f': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(51): error C2146: syntax error: missing ';' before identifier 'p'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(51): error C2065: 'p': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(51): error C2065: 'pose': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(51): error C2228: left of '.Position' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(51): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(52): error C2065: 'p': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(52): error C2228: left of '.x' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(52): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(52): error C2228: left of '.y' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(52): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(52): error C2228: left of '.z' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(52): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(60): error C2065: 'quat': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(60): error C2146: syntax error: missing ';' before identifier 'myQuat'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(60): error C2065: 'myQuat': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(60): error C2065: 'o': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(60): error C2228: left of '.w' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(60): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(60): error C2228: left of '.x' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(60): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(60): error C2228: left of '.y' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(60): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(60): error C2228: left of '.z' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(60): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(60): error C3861: 'quat': identifier not found
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(62): error C2039: 'cout': is not a member of 'std'
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\predefined c++ types (compiler internal)(208): note: see declaration of 'std'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(62): error C2065: 'cout': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(62): error C2653: 'glm': is not a class or namespace name
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(62): error C2065: 'myQuat': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(62): error C3861: 'to_string': identifier not found
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(62): error C2039: 'endl': is not a member of 'std'
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\predefined c++ types (compiler internal)(208): note: see declaration of 'std'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(62): error C2065: 'endl': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(64): error C2065: 'vec3': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(64): error C2146: syntax error: missing ';' before identifier 'euler'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(64): error C2065: 'euler': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(64): error C2065: 'myQuat': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(64): error C3861: 'eulerAngles': identifier not found
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(65): error C2065: 'euler': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(65): error C2228: left of '.x' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(65): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(65): error C2228: left of '.y' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(65): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(65): error C2228: left of '.z' must have class/struct/union
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(65): note: type is 'unknown-type'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(68): error C2065: 'quat': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(68): error C2146: syntax error: missing ';' before identifier 'testq'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(68): error C2065: 'testq': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(68): error C3861: 'cos': identifier not found
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(68): error C3861: 'sin': identifier not found
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(68): error C3861: 'quat': identifier not found
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(70): error C2039: 'cout': is not a member of 'std'
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\predefined c++ types (compiler internal)(208): note: see declaration of 'std'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(70): error C2065: 'cout': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(70): error C2653: 'glm': is not a class or namespace name
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(70): error C2065: 'testq': undeclared identifier
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(70): error C3861: 'to_string': identifier not found
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(70): error C2039: 'endl': is not a member of 'std'
+  c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\predefined c++ types (compiler internal)(208): note: see declaration of 'std'
+c:\users\peto\documents\visual studio 2015\projects\myoculus3_euler_loop\myoculus3_euler_loop\myoculus3_euler_loop.cpp(70): fatal error C1003: error count exceeds 100; stopping compilation

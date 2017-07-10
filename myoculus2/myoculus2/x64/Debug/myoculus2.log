@@ -1,0 +1,7 @@
+﻿  myoculus2.cpp
+c:\users\peto\documents\visual studio 2015\projects\myoculus2\myoculus2\myoculus2.cpp(75): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+c:\users\peto\documents\visual studio 2015\projects\myoculus2\myoculus2\myoculus2.cpp(85): warning C4305: '*=': truncation from 'double' to 'float'
+c:\users\peto\documents\visual studio 2015\projects\myoculus2\myoculus2\myoculus2.cpp(86): warning C4305: '*=': truncation from 'double' to 'float'
+c:\users\peto\documents\visual studio 2015\projects\myoculus2\myoculus2\myoculus2.cpp(87): warning C4305: '*=': truncation from 'double' to 'float'
+  myoculus2.vcxproj -> C:\Users\Peto\Documents\Visual Studio 2015\Projects\myoculus2\x64\Debug\myoculus2.exe
+  myoculus2.vcxproj -> C:\Users\Peto\Documents\Visual Studio 2015\Projects\myoculus2\x64\Debug\myoculus2.pdb (Full PDB)
