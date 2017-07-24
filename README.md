@@ -1,4 +1,4 @@
-# oculusros
+# Oculus Baxter
 Oculus Rift + Touch (Windows 10) telemetric control of the Baxter robot on ROS (Ubuntu 16.04). Publishes data from a Windows pc to a Ubuntu Baxter workstation. Built using Visual Studio 2015. Requirements: Oculus Rift + Touch, Baxter robot / Gazebo simulator.
 
 The only relevant folders are Oculus and Oculus_ROS, the rest are old test versions.
