@@ -2,7 +2,8 @@
 import rospy
 from std_msgs.msg import Float64
 
-# def callback(data):
+#Callback function template
+#def callback(data):
 # 	rospy.loginfo(rospy.get_caller_id() + "I heard %f", data.data)
 
 # Left hand
