@@ -16,7 +16,7 @@ int _tmain(int argc, _TCHAR * argv[])
 {
 	// Connect to ROS Master
 	ros::NodeHandle nh;
-	char *ros_master = "192.168.1.2:11411";
+	char *ros_master = "130.209.247.100:11411";
 	printf("Connecting to server at %s\n", ros_master);
 	nh.initNode(ros_master);
 
