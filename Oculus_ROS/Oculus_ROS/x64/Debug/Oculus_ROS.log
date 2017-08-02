@@ -6,6 +6,5 @@ c:\users\peto\documents\visual studio 2015\projects\oculus_ros\ros_lib\rosserial
 c:\users\peto\documents\visual studio 2015\projects\oculus_ros\ros_lib\rosserial_msgs\requestparam.h(27): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
 c:\users\peto\documents\visual studio 2015\projects\oculus_ros\ros_lib\rosserial_msgs\requestparam.h(121): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
 c:\users\peto\documents\visual studio 2015\projects\oculus_ros\ros_lib\std_msgs\string.h(26): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
-c:\users\peto\documents\visual studio 2015\projects\oculus_ros\oculus_ros\main.cpp(54): warning C4101: 'inputState': unreferenced local variable
   Oculus_ROS.vcxproj -> C:\Users\Peto\Documents\Visual Studio 2015\Projects\Oculus_ROS\x64\Debug\Oculus_ROS.exe
   Oculus_ROS.vcxproj -> C:\Users\Peto\Documents\Visual Studio 2015\Projects\Oculus_ROS\x64\Debug\Oculus_ROS.pdb (Full PDB)
