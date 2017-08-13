@@ -85,7 +85,6 @@ int _tmain(int argc, _TCHAR * argv[])
 			printf("Right hand quaternion is: ");
 			std::cout << glm::to_string(RHorient_quat) << std::endl;
 
-			// RH orientation conversion to euler
 			vec3 RHorient_eul = eulerAngles(RHorient_quat);
 			printf("The equivalent RH euler angles are:\nPitch(x): %.3f\nYaw(y): %.3f\nRoll(z): %3f\n", 
 				RADTODEG(RHorient_eul.x), RADTODEG(RHorient_eul.y), RADTODEG(RHorient_eul.z));
@@ -94,18 +93,18 @@ int _tmain(int argc, _TCHAR * argv[])
 			robot.LH_pos_x_msg.data = LHpos.x;
 			robot.LH_pos_y_msg.data = LHpos.y;
 			robot.LH_pos_z_msg.data = LHpos.z;
-			robot.LH_ori_w_msg.data = LHorient.w;
-			robot.LH_ori_x_msg.data = LHorient.x;
-			robot.LH_ori_y_msg.data = LHorient.y;
-			robot.LH_ori_z_msg.data = LHorient.z;
+
+			robot.LH_roll_msg.data = LHorient_eul.z;
+			robot.LH_pitch_msg.data = LHorient_eul.x;
+			robot.LH_yaw_msg.data = LHorient_eul.y;
 
 			robot.RH_pos_x_msg.data = RHpos.x;
 			robot.RH_pos_y_msg.data = RHpos.y;
 			robot.RH_pos_z_msg.data = RHpos.z;
-			robot.RH_ori_w_msg.data = RHorient.w;
-			robot.RH_ori_x_msg.data = RHorient.x;
-			robot.RH_ori_y_msg.data = RHorient.y;
-			robot.RH_ori_z_msg.data = RHorient.z;
+
+			robot.RH_roll_msg.data = RHorient_eul.z;
+			robot.RH_pitch_msg.data = RHorient_eul.x;
+			robot.RH_yaw_msg.data = RHorient_eul.y;
 
 			robot.publishPose();
 
@@ -119,15 +118,46 @@ int _tmain(int argc, _TCHAR * argv[])
 					robot.resetPose();
 				}
 				// Publish index trigger to grip objects with the arms
-				if (inputState.IndexTrigger[rightHand] > 0.05f)
+				if (inputState.IndexTrigger[rightHand] > 0.01f)
 				{
 					robot.right_grip_msg.data = inputState.IndexTrigger[rightHand];
 					robot.rightGrip();
+				} 
+				else
+				{
+					robot.right_grip_msg.data = 0.0;
+					robot.rightGrip();
 				}
-				if (inputState.IndexTrigger[leftHand] > 0.05f)
+				if (inputState.IndexTriggerNoDeadzone[leftHand] > 0.01f)
 				{
 					robot.left_grip_msg.data = inputState.IndexTrigger[leftHand];
 					robot.leftGrip();
+				}
+				else
+				{
+					robot.left_grip_msg.data = 0.0;
+					robot.leftGrip();
+				}
+				// Activate wrist roll mode for each hand
+				if (inputState.Buttons & ovrButton_A)
+				{
+					robot.RH_mode_roll_msg.data = 1.0;
+					robot.RHModeRoll();
+				}
+				else
+				{
+					robot.RH_mode_roll_msg.data = 0.0;
+					robot.RHModeRoll();
+				}
+				if (inputState.Buttons & ovrButton_X)
+				{
+					robot.LH_mode_roll_msg.data = 1.0;
+					robot.LHModeRoll();
+				}
+				else
+				{
+					robot.LH_mode_roll_msg.data = 0.0;
+					robot.LHModeRoll();
 				}
 			}
 
@@ -145,9 +175,12 @@ int _tmain(int argc, _TCHAR * argv[])
 			vec3 euler = eulerAngles(myQuat);
 			printf("The equivalent euler angles are:\nPitch(x): %.3f\nYaw(y): %.3f\nRoll(z): %3f\n", RADTODEG(euler.x), RADTODEG(euler.y), RADTODEG(euler.z));
 
+			// Publish head pan (yaw)
+			robot.head_pan_msg.data = euler.y;
+			robot.headPan();
 
 			// ---------- Wait and clear screen ----------
-			//std::this_thread::sleep_for(std::chrono::milliseconds(5));
+			//std::this_thread::sleep_for(std::chrono::milliseconds(200));
 			std::system("cls");
 		}
 		else {
