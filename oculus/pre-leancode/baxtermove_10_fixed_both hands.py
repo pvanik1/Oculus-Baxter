@@ -22,9 +22,7 @@ from baxter_core_msgs.srv import (
 	SolvePositionIKRequest,
 )
 
-from robotpose import RobotPose
-
-def ik_solve(limb, robotPose):
+def ik_solve(limb):
 	ns = "ExternalTools/" + limb + "/PositionKinematicsNode/IKService"
 	iksvc = rospy.ServiceProxy(ns, SolvePositionIK)
 	ikreq = SolvePositionIKRequest()
@@ -35,15 +33,15 @@ def ik_solve(limb, robotPose):
 			header=hdr,
 			pose=Pose(
 				position=Point(
-					x=robotPose.LH_pos_x,
-					y=robotPose.LH_pos_y,
-					z=robotPose.LH_pos_z,
+					x=0.657579481614,
+					y=0.851981417433,
+					z=0.0388352386502,
 				),
 				orientation=Quaternion(
-					x=robotPose.LH_ori_x,
-					y=robotPose.LH_ori_y,
-					z=robotPose.LH_ori_z,
-					w=robotPose.LH_ori_w,
+					x=-0.366894936773,
+					y=0.885980397775,
+					z=0.108155782462,
+					 w=0.262162481772,
 				),
 			),
 		),
@@ -51,19 +49,20 @@ def ik_solve(limb, robotPose):
 			header=hdr,
 			pose=Pose(
 				position=Point(
-					x=robotPose.RH_pos_x,
-					y=robotPose.RH_pos_y,
-					z=robotPose.RH_pos_z,
+					x=0.656982770038,
+					y=-0.852598021641,
+					z=0.0388609422173,
 				),
 				orientation=Quaternion(
-					x=robotPose.RH_ori_x,
-					y=robotPose.RH_ori_y,
-					z=robotPose.RH_ori_z,
-					w=robotPose.RH_ori_w,
+					x=0.367048116303,
+					y=0.885911751787,
+					z=-0.108908281936,
+					w=0.261868353356,
 				),
 			),
 		),
 	}
+
 	ikreq.pose_stamp.append(poses[limb])
 
 	try:
@@ -83,35 +82,46 @@ def ik_solve(limb, robotPose):
 
 	return 0
 
-def update():
-	global goalPose
-	global right_limb
 
-	goalPose.RH_pos_y += 0.12
-	goalPose.LH_pos_y -= 0.07
+def main():
 
-	if (goalPose.RH_pos_y >= -0.1):
-		print("Done :)")
-		right_limb.move_to_neutral()
-		left_limb.move_to_neutral()
-		quit()
-
-if __name__ == '__main__':
-	# initialize the ROS node, registering it with the Master
-	rospy.init_node("Baxter_Move_Dynamic")
-
-	# initialise robot pose
-	goalPose = RobotPose()
+	# initialize our ROS node, registering it with the Master
+	rospy.init_node("Baxter_Move")
 
 	# create an instance of baxter_interface's Limb class
 	right_limb = baxter_interface.Limb("right")
 	left_limb = baxter_interface.Limb("left")
 
-	while not rospy.is_shutdown():
-		update()
-		print(goalPose.RH_pos_y)
-		right_limb.move_to_joint_positions(ik_solve('right', goalPose))
-		left_limb.move_to_joint_positions(ik_solve('left', goalPose))
+	# get the right limb's current joint angles
+	right_angles = right_limb.joint_angles()
+	left_angles = left_limb.joint_angles()
+
+	# reassign new joint angles (all zeros) which we will later command to the limb
+	right_angles['right_s0']=0.0
+	right_angles['right_s1']=0.0
+	right_angles['right_e0']=0.0
+	right_angles['right_e1']=0.0
+	right_angles['right_w0']=0.0
+	right_angles['right_w1']=0.0
+	right_angles['right_w2']=0.0
+
+	left_angles['left_s0']=0.0
+	left_angles['left_s1']=0.0
+	left_angles['left_e0']=0.0
+	left_angles['left_e1']=0.6
+	left_angles['left_w0']=0.0
+	left_angles['left_w1']=0.0
+	left_angles['left_w2']=0.0
+
+	# move the right arm to those joint angles
+	right_limb.move_to_joint_positions(right_angles)
+	left_limb.move_to_joint_positions(left_angles) #TODO delete this afterwards
+
+	right_limb.move_to_joint_positions(ik_solve('right'))
+	left_limb.move_to_joint_positions(ik_solve('left'))
 
 	# quit
 	quit()
+
+if __name__ == '__main__':
+	main()

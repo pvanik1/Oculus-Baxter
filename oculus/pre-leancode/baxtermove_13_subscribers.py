@@ -18,7 +18,10 @@ from geometry_msgs.msg import (
 	Point,
 	Quaternion,
 )
-from std_msgs.msg import Header
+from std_msgs.msg import (
+	Header,
+	Float64,
+)
  
 from baxter_core_msgs.srv import (
 	SolvePositionIK,
@@ -97,8 +100,7 @@ def update():
 
 	if (goalPose.RH_pos_y >= -0.1):
 		print("Done :)")
-		right_limb.move_to_neutral()
-		left_limb.move_to_neutral()
+		move_to_human_neutral()
 		quit()
 
 def create_subs():
@@ -119,7 +121,8 @@ def create_subs():
 	rospy.Subscriber('RH_ori_y', Float64, call_RH_ori_y)
 	rospy.Subscriber('RH_ori_z', Float64, call_RH_ori_z)
 
-	rospy.spin()
+	print("BREAK 99999")
+	
 
 # Callback functions
 
@@ -195,38 +198,107 @@ def call_RH_ori_z(data):
 	goalPose.RH_ori_z = data.data
 	rospy.loginfo("RH ori z : %f", goalPose.RH_ori_z)
 
-# Starting pose similar to human starting pose
-def move_to_human_neutral():
-	global right_limb
-	global left_limb
+def rockstar():
+	
+	print("holaaa senor")
+	right_angles={}
+	left_angles={}
 
-	# TODO get joint angles and set them as in hello baxter
+	right_angles['right_s0']=0.5
+	right_angles['right_s1']=-0.7
+	right_angles['right_e0']=0.0
+	right_angles['right_e1']=0.0
+	right_angles['right_w0']=0.0
+	right_angles['right_w1']=-0.3
+	right_angles['right_w2']=0.0
+
+	left_angles['left_s0']=-0.5
+	left_angles['left_s1']=-0.7
+	left_angles['left_e0']=0.0
+	left_angles['left_e1']=0.0
+	left_angles['left_w0']=0.0
+	left_angles['left_w1']=-0.3	
+	left_angles['left_w2']=0.0
+
+	right_limb.move_to_joint_positions(right_angles, 5, 0.1)
+	left_limb.move_to_joint_positions(left_angles, 5, 0.1)
+
+	right_limb.move_to_joint_positions(right_angles, 5, 0.1)
+	left_limb.move_to_joint_positions(left_angles, 5, 0.1)
+	right_limb.move_to_joint_positions(right_angles, 5, 0.1)
+	left_limb.move_to_joint_positions(left_angles, 5, 0.1)
+	right_limb.move_to_joint_positions(right_angles, 5, 0.1)
+	left_limb.move_to_joint_positions(left_angles, 5, 0.1)
+	right_limb.move_to_joint_positions(right_angles, 5, 0.1)
+	left_limb.move_to_joint_positions(left_angles, 5, 0.1)
+	right_limb.move_to_joint_positions(right_angles, 5, 0.1)
+	left_limb.move_to_joint_positions(left_angles, 5, 0.1)
+	right_limb.move_to_joint_positions(right_angles, 5, 0.1)
+	left_limb.move_to_joint_positions(left_angles, 5, 0.1)
+	
+
+def move_to_human_neutral():
+	#global right_limb
+	#global left_limb
+	right_angles = {}
+	left_angles = {}
+
+	right_angles['right_s0']=0.5
+	right_angles['right_s1']=-1
+	right_angles['right_e0']=0.0
+	right_angles['right_e1']=2.3
+	right_angles['right_w0']=0.0
+	right_angles['right_w1']=-1
+	right_angles['right_w2']=0.0
+
+	left_angles['left_s0']=-0.5
+	left_angles['left_s1']=-1
+	left_angles['left_e0']=0.0
+	left_angles['left_e1']=2.3
+	left_angles['left_w0']=0.0
+	left_angles['left_w1']=-1
+	left_angles['left_w2']=0.0
+
+	# in IK version, this is done by comparing taget pose and goal pose, e.g. compPose(goal, curr)
+	counter = 0
+	while(counter < 10):
+		#cmp(right_angles, right_limb.joint_angles()) + cmp(left_angles, left_limb.joint_angles()) != 0):
+		right_limb.set_joint_positions(right_angles)
+		rospy.sleep(0.12)
+		left_limb.set_joint_positions(left_angles)
+		rospy.sleep(0.12)
+		print(right_limb.joint_angles())
+		print(left_limb.joint_angles())
+		counter+=1
+
 
 
 if __name__ == '__main__':
 	# initialize the ROS node, registering it with the Master
 	rospy.init_node("Baxter_Move_Subscribers")
+	# rs = baxter_interface.RobotEnable()
+	# rs.enable()
 
 	# initialize robot pose
 	goalPose = RobotPose()
-
+	
 	# create an instance of baxter_interface's Limb class
 	right_limb = baxter_interface.Limb("right")
 	left_limb = baxter_interface.Limb("left")
 
-	# move to starting pose
+	right_limb.set_joint_position_speed(1)
+	left_limb.set_joint_position_speed(1)
+
+	rockstar()
 	move_to_human_neutral()
+	
 
 	# initialise subscribers
 	create_subs()
 
-	cycle = 0
-	while not rospy.is_shutdown():
-		#update()
-		#print(goalPose.RH_pos_y)
-		print("Cycle %d", cycle)
-		right_limb.move_to_joint_positions(ik_solve('right', goalPose))
-		left_limb.move_to_joint_positions(ik_solve('left', goalPose))
-
-	# quit
+	# while not rospy.is_shutdown():
+	# 	update()
+	# 	right_limb.move_to_joint_positions(ik_solve('right', goalPose), 0.5)
+	# 	left_limb.move_to_joint_positions(ik_solve('left', goalPose), 0.5)
+	
 	quit()
