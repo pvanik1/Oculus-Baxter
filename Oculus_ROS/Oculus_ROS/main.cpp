@@ -114,7 +114,12 @@ int _tmain(int argc, _TCHAR * argv[])
 				// Publish robot pose reset if right thumbstick pressed
 				if (inputState.Buttons & ovrButton_RThumb)
 				{
-					robot.reset_pose_msg.data = "Resetting robot pose...";
+					robot.reset_pose_msg.data = "human";
+					robot.resetPose();
+				}
+				if (inputState.Buttons & ovrButton_LThumb)
+				{
+					robot.reset_pose_msg.data = "baxter";
 					robot.resetPose();
 				}
 				// Publish index trigger to grip objects with the arms
@@ -161,7 +166,6 @@ int _tmain(int argc, _TCHAR * argv[])
 				}
 			}
 
-
 			// ---------- Get headset position and orientation ----------
 			ovrVector3f p = state.HeadPose.ThePose.Position;
 			printf("\nHeadset position is: %.2f, %.2f, %.2f\n", p.x, p.y, p.z);
@@ -179,8 +183,7 @@ int _tmain(int argc, _TCHAR * argv[])
 			robot.head_pan_msg.data = euler.y;
 			robot.headPan();
 
-			// ---------- Wait and clear screen ----------
-			//std::this_thread::sleep_for(std::chrono::milliseconds(200));
+			// ---------- Clear screen ----------
 			std::system("cls");
 		}
 		else {
