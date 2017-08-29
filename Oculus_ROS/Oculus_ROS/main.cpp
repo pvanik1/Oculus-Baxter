@@ -25,8 +25,8 @@ using std::string;
 int _tmain(int argc, _TCHAR * argv[])
 {
 	// Wait for user to get into position to start tracking
-	printf("Commencing 3 second countdown for user to get into position...");
-	std::this_thread::sleep_for(std::chrono::milliseconds(3000));
+	printf("Commencing 5 second countdown for user to get into position...");
+	std::this_thread::sleep_for(std::chrono::milliseconds(5000));
 
 	// Boilerplate
 	printf("Initialising Oculus...\n");
