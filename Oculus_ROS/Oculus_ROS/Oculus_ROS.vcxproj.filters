@@ -18,9 +18,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -29,22 +26,19 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RobotState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\ros_lib\duration.cpp">
+    <ClCompile Include="..\..\zed-oculus-master\ros_lib\duration.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\ros_lib\time.cpp">
+    <ClCompile Include="..\..\zed-oculus-master\ros_lib\time.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\ros_lib\WindowsSocket.cpp">
+    <ClCompile Include="..\..\zed-oculus-master\ros_lib\WindowsSocket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
