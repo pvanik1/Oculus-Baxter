@@ -93,7 +93,7 @@ def call_LH_pos_y(data):
 	robot.goalPose.LH_pos_z = (data.data + presets.OCULUS_ORIGIN_Y_ADJUSTMENT) * presets.USER_MAPPING_MULTIPLIER
 
 def call_LH_pos_z(data):
-	robot.goalPose.LH_pos_x = -data.data  * presets.USER_MAPPING_MULTIPLIER * presets.FORWARD_AXIS_CORRECTION
+	robot.goalPose.LH_pos_x = -data.data  * presets.USER_MAPPING_MULTIPLIER
 
 
 def call_LH_roll(data):
@@ -113,7 +113,7 @@ def call_RH_pos_y(data):
 	robot.goalPose.RH_pos_z = (data.data + presets.OCULUS_ORIGIN_Y_ADJUSTMENT) * presets.USER_MAPPING_MULTIPLIER
 
 def call_RH_pos_z(data):
-	robot.goalPose.RH_pos_x = -data.data * presets.USER_MAPPING_MULTIPLIER * presets.FORWARD_AXIS_CORRECTION
+	robot.goalPose.RH_pos_x = -data.data * presets.USER_MAPPING_MULTIPLIER
 
 def call_RH_roll(data):
 	robot.goalPose.RH_yaw = -data.data

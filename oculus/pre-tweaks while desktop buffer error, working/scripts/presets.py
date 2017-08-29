@@ -22,13 +22,15 @@ GRIP_VELOCITY = 100
 # effector from coordinate origin in an east-west axis limb stretch.
 USER_MOVEMENT_RANGE = 0.8
 ROBOT_MOVEMENT_RANGE = 1.45
-FORWARD_AXIS_CORRECTION = 1.1 # arbitrary value to make it less exhausting for the user to operate with arms forwards
 
 # Threshold of accuracy between target pose and actual pose
 PRECISION_TOLERANCE = 0.05
 
 # Multiplier for mapping user's figure onto the robot:
 USER_MAPPING_MULTIPLIER = ROBOT_MOVEMENT_RANGE / USER_MOVEMENT_RANGE
+
+# Constant to compensate for the bulkiness of Baxter's joints for more comfortable tracking
+BAXTER_BULK = 1.1
 
 # Measurements to determine correct placement of the origin of Oculus Rift coordinate 
 # frame. Based on east-west axis limb stretch

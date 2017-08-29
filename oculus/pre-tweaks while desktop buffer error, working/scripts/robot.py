@@ -104,13 +104,13 @@ def reset_pose(pose):
 					'right_w1': -1.5715633171886063, 'right_w2': -0.5250049246537829, 'right_e0': 0.24313595487983808, 'right_e1': 2.16483038690329}
 		langles = {'left_w0': 1.2655341500054664, 'left_w1': -1.4442429117941171, 'left_w2': 0.4555922940019679, 
 				'left_e0': -0.22971362298584072, 'left_e1': 2.2595537005552147, 'left_s0': 0.33555829734993425, 'left_s1': -0.33670878294084833}
-	elif pose == "baxter":
+	else:
 		rangles = {'right_s0': 0.01572330307582549, 'right_s1': -1.3222914391572267, 'right_w0': -0.055223308363874894, 'right_w1': 0.4640291883353377, 
 					'right_w2': -0.0030679615757708274, 'right_e0': 0.3976845192592935, 'right_e1': 2.1533255309941497}
 
 		langles = {'left_w0': 0.07784952498518474, 'left_w1': 0.44447093328979864, 'left_w2': 0.0011504855909140602, 'left_e0': -0.5898156129419416, 
 					'left_e1': 2.137602227918324, 'left_s0': 0.048703890015361885, 'left_s1': -1.3794322235059584}
-	else: return
+
 
 	right_limb.set_joint_position_speed(1)
 	right_limb.move_to_joint_positions(rangles)
@@ -122,12 +122,30 @@ def reset_pose(pose):
 
 	updateCurrentPose()
 
+# Resets the orientation of the goal pose to the specified fixed orientation
+def fixOrientation():
+	orientation = presets.getFixedOrientation()
+	goalPose.RH_ori_x =  orientation["x"]
+	goalPose.RH_ori_y =  orientation["y"]
+	goalPose.RH_ori_z =  orientation["z"]
+	goalPose.RH_ori_w =  orientation["w"]
+
+	goalPose.LH_ori_x =  orientation["x"]
+	goalPose.LH_ori_y =  orientation["y"]
+	goalPose.LH_ori_z =  orientation["z"]
+	goalPose.LH_ori_w =  orientation["w"]
+
+
 def poseGoalReached():
 	updateCurrentPose()
 
 	RH_pos_x_GoalReached = (abs(currentPose.RH_pos_x - goalPose.RH_pos_x) <= presets.PRECISION_TOLERANCE)
 	RH_pos_y_GoalReached = (abs(currentPose.RH_pos_y - goalPose.RH_pos_y) <= presets.PRECISION_TOLERANCE)
 	RH_pos_z_GoalReached = (abs(currentPose.RH_pos_z - goalPose.RH_pos_z) <= presets.PRECISION_TOLERANCE)
+
+	# RH_pos_x_GoalReached = (abs(right_limb.endpoint_pose()["position"].x - goalPose.RH_pos_x) <= presets.PRECISION_TOLERANCE)
+	# RH_pos_y_GoalReached = (abs(right_limb.endpoint_pose()["position"].y - goalPose.RH_pos_y) <= presets.PRECISION_TOLERANCE)
+	# RH_pos_z_GoalReached = (abs(right_limb.endpoint_pose()["position"].z - goalPose.RH_pos_z) <= presets.PRECISION_TOLERANCE)
 
 	RH_ori_w_GoalReached = (abs(currentPose.RH_ori_w - goalPose.RH_ori_w) <= presets.PRECISION_TOLERANCE)
 	RH_ori_x_GoalReached = (abs(currentPose.RH_ori_x - goalPose.RH_ori_x) <= presets.PRECISION_TOLERANCE)
@@ -144,9 +162,11 @@ def poseGoalReached():
 	LH_ori_z_GoalReached = (abs(currentPose.LH_ori_z - goalPose.LH_ori_z) <= presets.PRECISION_TOLERANCE)
 
 	if (RH_pos_x_GoalReached & RH_pos_y_GoalReached & RH_pos_z_GoalReached &
-			RH_ori_w_GoalReached & RH_ori_x_GoalReached & RH_ori_y_GoalReached & RH_ori_z_GoalReached &
-		LH_pos_x_GoalReached & LH_pos_y_GoalReached & LH_pos_z_GoalReached &
-			LH_ori_w_GoalReached & LH_ori_x_GoalReached & LH_ori_y_GoalReached & LH_ori_z_GoalReached):
+			RH_ori_w_GoalReached & RH_ori_x_GoalReached & RH_ori_y_GoalReached & RH_ori_z_GoalReached):
+	# if (RH_pos_x_GoalReached & RH_pos_y_GoalReached & RH_pos_z_GoalReached &
+	# 	RH_ori_w_GoalReached & RH_ori_x_GoalReached & RH_ori_y_GoalReached & RH_ori_z_GoalReached):
+		# LH_pos_x_GoalReached & LH_pos_y_GoalReached & LH_pos_z_GoalReached &
+		# LH_ori_w_GoalReached & LH_ori_x_GoalReached & LH_ori_y_GoalReached & LH_ori_z_GoalReached):
 		return True
 	else:
 		return False

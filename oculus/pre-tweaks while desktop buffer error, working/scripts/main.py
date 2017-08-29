@@ -83,7 +83,7 @@ if __name__ == '__main__':
 	# Initialise robot to the given starting pose:
 	#	"baxter" - for pick and place tasks
 	#	"human" - for mimicking human motion
-	robot.initialise("human")
+	robot.initialise("baxter")
 
 	# Initialise subscribers
 	subscribers.create_subs()

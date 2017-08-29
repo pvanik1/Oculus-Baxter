@@ -80,15 +80,16 @@ if __name__ == '__main__':
 	rs = baxter_interface.RobotEnable()
 	rs.enable()
 
-	# Initialise robot to the given starting pose:
-	#	"baxter" - for pick and place tasks
-	#	"human" - for mimicking human motion
-	robot.initialise("human")
+	# Initialise robot interface
+	robot.initialise()
+
+	# Move to starting pose
+	robot.reset_pose()
 
 	# Initialise subscribers
 	subscribers.create_subs()
 
-	# Flags for "roll mode"
+	# Flag for "roll mode"
 	RH_rolling = False
 	LH_rolling = False
 
