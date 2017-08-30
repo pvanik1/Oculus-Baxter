@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['self_5fcalibration_5fstate_5ffailed',['SELF_CALIBRATION_STATE_FAILED',['../namespacesl.html#gacce19db438a07075b7e5e22ee5845c95a186540c5396c41f3dd9a604744dc643f',1,'sl']]],
+  ['self_5fcalibration_5fstate_5flast',['SELF_CALIBRATION_STATE_LAST',['../namespacesl.html#gacce19db438a07075b7e5e22ee5845c95ad2975fabe49c8599b68e746bb33955e4',1,'sl']]],
+  ['self_5fcalibration_5fstate_5fnot_5fstarted',['SELF_CALIBRATION_STATE_NOT_STARTED',['../namespacesl.html#gacce19db438a07075b7e5e22ee5845c95ab0ee75d5bf74529e3029e01d0a3a6851',1,'sl']]],
+  ['self_5fcalibration_5fstate_5frunning',['SELF_CALIBRATION_STATE_RUNNING',['../namespacesl.html#gacce19db438a07075b7e5e22ee5845c95af046a5c90ab9631e301fb668b557c7f1',1,'sl']]],
+  ['self_5fcalibration_5fstate_5fsuccess',['SELF_CALIBRATION_STATE_SUCCESS',['../namespacesl.html#gacce19db438a07075b7e5e22ee5845c95aeebd1eac6cf938fd5f2be5d4cf6e4c45',1,'sl']]],
+  ['sensing_5fmode_5ffill',['SENSING_MODE_FILL',['../namespacesl.html#ga391147e2eab8e101a7ff3a06cbed22daa61733c1efa8a97aa2d6009d45545f91d',1,'sl']]],
+  ['sensing_5fmode_5flast',['SENSING_MODE_LAST',['../namespacesl.html#ga391147e2eab8e101a7ff3a06cbed22daa36767d4e81fe63142fd42fe077f56b13',1,'sl']]],
+  ['sensing_5fmode_5fstandard',['SENSING_MODE_STANDARD',['../namespacesl.html#ga391147e2eab8e101a7ff3a06cbed22daaa01788cdbf86d84cc83d97fa5f92073f',1,'sl']]],
+  ['spatial_5fmapping_5fstate_5ffps_5ftoo_5flow',['SPATIAL_MAPPING_STATE_FPS_TOO_LOW',['../namespacesl.html#ga004c296fb18548aabf8430a59a335958aa889011f585d1f57eaed8b6e6b3e99d0',1,'sl']]],
+  ['spatial_5fmapping_5fstate_5finitializing',['SPATIAL_MAPPING_STATE_INITIALIZING',['../namespacesl.html#ga004c296fb18548aabf8430a59a335958a87da5033186eaf65fea413fb0ac8ab7e',1,'sl']]],
+  ['spatial_5fmapping_5fstate_5flast',['SPATIAL_MAPPING_STATE_LAST',['../namespacesl.html#ga004c296fb18548aabf8430a59a335958ae906449313355c19fe24981516c0617b',1,'sl']]],
+  ['spatial_5fmapping_5fstate_5fnot_5fenabled',['SPATIAL_MAPPING_STATE_NOT_ENABLED',['../namespacesl.html#ga004c296fb18548aabf8430a59a335958a1829017c8286524ae6a35a25dfde16f6',1,'sl']]],
+  ['spatial_5fmapping_5fstate_5fnot_5fenough_5fmemory',['SPATIAL_MAPPING_STATE_NOT_ENOUGH_MEMORY',['../namespacesl.html#ga004c296fb18548aabf8430a59a335958aba08efad5f070e1f01e1ca5d5a2d800e',1,'sl']]],
+  ['spatial_5fmapping_5fstate_5fok',['SPATIAL_MAPPING_STATE_OK',['../namespacesl.html#ga004c296fb18548aabf8430a59a335958a996718f0ac6306b3e3f0a3589df863cb',1,'sl']]],
+  ['success',['SUCCESS',['../namespacesl.html#ga4db9ee29f2ff83c71567c12f6bfbf28cac7f69f7c9e5aea9b8f54cf02870e2bf8',1,'sl']]],
+  ['svo_5fcompression_5fmode_5flast',['SVO_COMPRESSION_MODE_LAST',['../namespacesl.html#gae52adc3898d4dd4cb5b770567fe8031ca31bf02442d08731edf8e4d45e0aa1200',1,'sl']]],
+  ['svo_5fcompression_5fmode_5flossless',['SVO_COMPRESSION_MODE_LOSSLESS',['../namespacesl.html#gae52adc3898d4dd4cb5b770567fe8031cacecc3bcb377f5339add331033b043844',1,'sl']]],
+  ['svo_5fcompression_5fmode_5flossy',['SVO_COMPRESSION_MODE_LOSSY',['../namespacesl.html#gae52adc3898d4dd4cb5b770567fe8031ca28d07561f2551901281fcef7fab6badf',1,'sl']]],
+  ['svo_5fcompression_5fmode_5fraw',['SVO_COMPRESSION_MODE_RAW',['../namespacesl.html#gae52adc3898d4dd4cb5b770567fe8031cac40fa247208c122cf3c142eb38639184',1,'sl']]]
+];
