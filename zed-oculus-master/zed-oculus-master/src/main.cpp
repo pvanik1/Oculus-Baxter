@@ -106,7 +106,10 @@ sl::Mat zed_image_Right;
 
 
 
-int main(int argc, char **argv) {
+int _tmain(int argc, _TCHAR * argv[]) {
+	// Wait for user to get into position to start tracking
+	printf("Commencing 4 second countdown for user to get into position...");
+	std::this_thread::sleep_for(std::chrono::milliseconds(4000));
     // Initialize SDL2's context
     SDL_Init(SDL_INIT_VIDEO);
     // Initialize Oculus' context
@@ -127,6 +130,20 @@ int main(int argc, char **argv) {
         SDL_Quit();
         return -1;
     }
+	// Recenter tracking origin to current position:
+	ovr_RecenterTrackingOrigin(session);
+	
+	// Create tracking states and robot state
+	ovrTrackingState state;
+	ovrInputState inputState;	// Controller buttons
+	ros::NodeHandle nh;
+	printf("Connecting to server at %s\n", ROS_MASTER);
+	nh.initNode(ROS_MASTER);
+
+	RobotState robot(nh);
+	std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
+	// -------------- ZED initialisation --------------
 
     int x = SDL_WINDOWPOS_CENTERED, y = SDL_WINDOWPOS_CENTERED;
     int winWidth = 1280;
