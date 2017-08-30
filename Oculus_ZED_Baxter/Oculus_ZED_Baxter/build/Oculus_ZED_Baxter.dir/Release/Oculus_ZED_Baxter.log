@@ -7,9 +7,4 @@ e:\my stuff\oculus-baxter\dependencies\ros_lib\rosserial_msgs/Log.h(38): warning
 e:\my stuff\oculus-baxter\dependencies\ros_lib\rosserial_msgs/RequestParam.h(27): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
 e:\my stuff\oculus-baxter\dependencies\ros_lib\rosserial_msgs/RequestParam.h(121): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
 E:\MY STUFF\Oculus-Baxter\dependencies\ros_lib\std_msgs\String.h(26): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
-E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\src\main.cpp(180): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\src\main.cpp(181): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\src\main.cpp(315): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\src\main.cpp(137): warning C4101: 'state': unreferenced local variable
-E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\src\main.cpp(138): warning C4101: 'inputState': unreferenced local variable
   Oculus_ZED_Baxter.vcxproj -> E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\build\Release\Oculus_ZED_Baxter.exe
