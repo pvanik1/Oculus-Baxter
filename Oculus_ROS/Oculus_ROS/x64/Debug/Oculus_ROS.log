@@ -1,10 +1,10 @@
 ﻿  main.cpp
-c:\users\peto\documents\visual studio 2015\projects\oculus_ros\ros_lib\rosserial_msgs\topicinfo.h(49): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
-c:\users\peto\documents\visual studio 2015\projects\oculus_ros\ros_lib\rosserial_msgs\topicinfo.h(54): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
-c:\users\peto\documents\visual studio 2015\projects\oculus_ros\ros_lib\rosserial_msgs\topicinfo.h(59): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
-c:\users\peto\documents\visual studio 2015\projects\oculus_ros\ros_lib\rosserial_msgs\log.h(36): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
-c:\users\peto\documents\visual studio 2015\projects\oculus_ros\ros_lib\rosserial_msgs\requestparam.h(27): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
-c:\users\peto\documents\visual studio 2015\projects\oculus_ros\ros_lib\rosserial_msgs\requestparam.h(121): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
-c:\users\peto\documents\visual studio 2015\projects\oculus_ros\ros_lib\std_msgs\string.h(26): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
-  Oculus_ROS.vcxproj -> C:\Users\Peto\Documents\Visual Studio 2015\Projects\Oculus_ROS\x64\Debug\Oculus_ROS.exe
-  Oculus_ROS.vcxproj -> C:\Users\Peto\Documents\Visual Studio 2015\Projects\Oculus_ROS\x64\Debug\Oculus_ROS.pdb (Full PDB)
+e:\my stuff\oculus-baxter\zed-oculus-master\ros_lib\rosserial_msgs\topicinfo.h(49): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+e:\my stuff\oculus-baxter\zed-oculus-master\ros_lib\rosserial_msgs\topicinfo.h(54): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+e:\my stuff\oculus-baxter\zed-oculus-master\ros_lib\rosserial_msgs\topicinfo.h(59): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+e:\my stuff\oculus-baxter\zed-oculus-master\ros_lib\rosserial_msgs\log.h(36): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+e:\my stuff\oculus-baxter\zed-oculus-master\ros_lib\rosserial_msgs\requestparam.h(27): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+e:\my stuff\oculus-baxter\zed-oculus-master\ros_lib\rosserial_msgs\requestparam.h(121): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+e:\my stuff\oculus-baxter\zed-oculus-master\ros_lib\std_msgs\string.h(26): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  Oculus_ROS.vcxproj -> E:\MY STUFF\Oculus-Baxter\Oculus_ROS\x64\Debug\Oculus_ROS.exe
+  Oculus_ROS.vcxproj -> E:\MY STUFF\Oculus-Baxter\Oculus_ROS\x64\Debug\Oculus_ROS.pdb (Full PDB)

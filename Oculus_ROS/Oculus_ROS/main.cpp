@@ -1,5 +1,3 @@
-//#include "stdafx.h"
-
 #include <iostream>
 #include "tchar.h"
 #include <stdio.h>
@@ -25,9 +23,8 @@ using std::string;
 int _tmain(int argc, _TCHAR * argv[])
 {
 	// Wait for user to get into position to start tracking
-	printf("Commencing 5 second countdown for user to get into position...");
-	std::this_thread::sleep_for(std::chrono::milliseconds(5000));
-
+	printf("Commencing 4 second countdown for user to get into position...");
+	std::this_thread::sleep_for(std::chrono::milliseconds(4000));
 	// Boilerplate
 	printf("Initialising Oculus...\n");
 	ovrResult result = ovr_Initialize(nullptr);
@@ -56,6 +53,7 @@ int _tmain(int argc, _TCHAR * argv[])
 	nh.initNode(ROS_MASTER);
 
 	RobotState robot(nh);
+	std::this_thread::sleep_for(std::chrono::milliseconds(500));
 
 	// In a loop, query the HMD for ts current tracking state, then publish it to the robot.
 	while (true) {
