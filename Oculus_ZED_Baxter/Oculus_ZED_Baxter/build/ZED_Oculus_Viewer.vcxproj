@@ -63,8 +63,8 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\build\Release\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZED_Oculus_Viewer.dir\Release\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZED Oculus Viewer</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Oculus_ZED_Baxter.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Oculus_ZED_Baxter</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
@@ -82,7 +82,7 @@
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>E:\MY STUFF\Oculus-Baxter\dependencies\OculusSDK\LibOVR\Include;E:\MY STUFF\Oculus-Baxter\dependencies\SDL2-2.0.5\include;$(IncludePath)</IncludePath>
+    <IncludePath>E:\MY STUFF\Oculus-Baxter\dependencies\ros_lib;E:\MY STUFF\Oculus-Baxter\dependencies\OculusSDK\LibOVR\Include;E:\MY STUFF\Oculus-Baxter\dependencies\SDL2-2.0.5\include;$(IncludePath)</IncludePath>
     <LibraryPath>E:\MY STUFF\Oculus-Baxter\dependencies\OculusSDK\LibOVR\Lib\Windows\x64\Release\VS2015;E:\MY STUFF\Oculus-Baxter\dependencies\SDL2-2.0.5\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -133,12 +133,12 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include;E:\MY STUFF\Oculus-Baxter\Oculus_ZED_Baxter\Oculus_ZED_Baxter\include;E:\MY STUFF\Oculus-Baxter\dependencies\ZED SDK\dependencies\glew-1.12.0\include;E:\MY STUFF\Oculus-Baxter\dependencies\ZED SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\MY STUFF\Oculus-Baxter\dependencies\glm;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include;E:\MY STUFF\Oculus-Baxter\Oculus_ZED_Baxter\Oculus_ZED_Baxter\include;E:\MY STUFF\Oculus-Baxter\dependencies\ZED SDK\dependencies\glew-1.12.0\include;E:\MY STUFF\Oculus-Baxter\dependencies\ZED SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -std=c++0x</AdditionalOptions>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -325,6 +325,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\duration.cpp" />
+    <ClCompile Include="..\src\RobotState.cpp" />
+    <ClCompile Include="..\src\time.cpp" />
+    <ClCompile Include="..\src\WindowsSocket.cpp" />
     <ClCompile Include="E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\src\Shader.cpp" />
     <ClCompile Include="E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\src\main.cpp" />
   </ItemGroup>
@@ -333,6 +337,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{816D836F-990E-3596-AC78-4C8D422C97EE}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\ros.h" />
+    <ClInclude Include="..\src\WindowsSocket.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

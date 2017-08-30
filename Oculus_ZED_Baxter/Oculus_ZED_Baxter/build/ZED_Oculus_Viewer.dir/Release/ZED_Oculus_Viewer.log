@@ -1,9 +1,13 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (ZED_Oculus_Viewer.dir\Release\) contains files shared from another project (ZED_Oculus_Viewer.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-cl : Command line warning D9002: ignoring unknown option '-std=c++0x'
-  Shader.cpp
+﻿cl : Command line warning D9002: ignoring unknown option '-std=c++0x'
   main.cpp
-E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\src\main.cpp(145): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\src\main.cpp(146): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\src\main.cpp(280): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
+e:\my stuff\oculus-baxter\dependencies\ros_lib\rosserial_msgs/TopicInfo.h(49): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+e:\my stuff\oculus-baxter\dependencies\ros_lib\rosserial_msgs/TopicInfo.h(54): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+e:\my stuff\oculus-baxter\dependencies\ros_lib\rosserial_msgs/TopicInfo.h(59): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+e:\my stuff\oculus-baxter\dependencies\ros_lib\rosserial_msgs/Log.h(38): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+e:\my stuff\oculus-baxter\dependencies\ros_lib\rosserial_msgs/RequestParam.h(27): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+e:\my stuff\oculus-baxter\dependencies\ros_lib\rosserial_msgs/RequestParam.h(121): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+E:\MY STUFF\Oculus-Baxter\dependencies\ros_lib\std_msgs\String.h(26): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\src\main.cpp(163): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\src\main.cpp(164): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\src\main.cpp(298): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   ZED_Oculus_Viewer.vcxproj -> E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\build\Release\ZED Oculus Viewer.exe

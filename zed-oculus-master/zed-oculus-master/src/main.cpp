@@ -37,7 +37,6 @@
 #include <OVR_CAPI.h>
 #include <OVR_CAPI_GL.h>
 
-
 #include <cuda.h>
 #include <cuda_runtime.h>
 #include <cuda_gl_interop.h>
@@ -46,7 +45,26 @@
 
 #include "Shader.hpp"
 
+#include "tchar.h"
+#include <stdio.h>
+#include <thread>
+
+#include <glm/glm.hpp>
+#include "glm/gtx/string_cast.hpp"
+
+#include "RobotState.h"
+
 #define MAX_FPS 120
+#define PI 3.14159265358979323846
+#define RADTODEG(x) ( (x) * 180.0 / PI )
+#define DEGTORAD(x) ( (x) * PI / 180.0 )
+#define ON_STATUS 3
+#define leftHand 0
+#define rightHand 1
+char *ROS_MASTER = "130.209.247.100:11411";
+
+using namespace glm;
+using std::string;
 
 GLchar* OVR_ZED_VS =
         "#version 330 core\n \

@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include "ros/msg.h"
 
+#undef ERROR
+
 namespace rosserial_msgs
 {
 
