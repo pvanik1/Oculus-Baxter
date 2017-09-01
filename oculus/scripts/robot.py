@@ -7,29 +7,30 @@ import presets
 
 class RobotPose:
 	def __init__(self):
-		self.RH_pos_x = 0.656982770038
-		self.RH_pos_y = -0.852598021641
-		self.RH_pos_z = 0.0388609422173
-		self.RH_ori_w = 0.261868353356
-		self.RH_ori_x = 0.367048116303
-		self.RH_ori_y = 0.885911751787
-		self.RH_ori_z = -0.108908281936
+		# Initial values for "human" pose
+		self.RH_pos_x = 0.6342171236731038
+		self.RH_pos_y = -0.36043150138041063
+		self.RH_pos_z = 0.09859203828689367
+		self.RH_ori_w = 0.7455594233663007
+		self.RH_ori_x = -0.12293476834953236
+		self.RH_ori_y = 0.6495988568385836
+		self.RH_ori_z = 0.08396138490140141
 
-		self.RH_roll = 0.0
-		self.RH_pitch = 1.5708
-		self.RH_yaw = 0.0
+		self.RH_roll = -30.939090668751863
+		self.RH_pitch = 81.58539975618045
+		self.RH_yaw = -14.12142637160184
 
-		self.LH_pos_x = 0.657579481614
-		self.LH_pos_y = 0.851981417433
-		self.LH_pos_z = 0.0388352386502
-		self.LH_ori_w = 0.262162481772
-		self.LH_ori_x = -0.366894936773
-		self.LH_ori_y = 0.885980397775
-		self.LH_ori_z = 0.108155782462
+		self.LH_pos_x = 0.6329613779972973
+		self.LH_pos_y = 0.38766854601727874
+		self.LH_pos_z = 0.09283436065295993
+		self.LH_ori_w = 0.6965639109812897
+		self.LH_ori_x = 0.1279323909724876
+		self.LH_ori_y = 0.7019381984496922
+		self.LH_ori_z = -0.07559620900358009
 
-		self.LH_roll = 0.0
-		self.LH_pitch = 1.5708
-		self.LH_yaw = 0.0
+		self.LH_roll = -30.939090668751863
+		self.LH_pitch = 81.58539975618045
+		self.LH_yaw = -14.12142637160184
 
 def initialise(pose):
 	global right_limb
@@ -104,12 +105,15 @@ def reset_pose(pose):
 					'right_w1': -1.5715633171886063, 'right_w2': -0.5250049246537829, 'right_e0': 0.24313595487983808, 'right_e1': 2.16483038690329}
 		langles = {'left_w0': 1.2655341500054664, 'left_w1': -1.4442429117941171, 'left_w2': 0.4555922940019679, 
 				'left_e0': -0.22971362298584072, 'left_e1': 2.2595537005552147, 'left_s0': 0.33555829734993425, 'left_s1': -0.33670878294084833}
-	elif pose == "baxter":
-		rangles = {'right_s0': 0.01572330307582549, 'right_s1': -1.3222914391572267, 'right_w0': -0.055223308363874894, 'right_w1': 0.4640291883353377, 
-					'right_w2': -0.0030679615757708274, 'right_e0': 0.3976845192592935, 'right_e1': 2.1533255309941497}
 
-		langles = {'left_w0': 0.07784952498518474, 'left_w1': 0.44447093328979864, 'left_w2': 0.0011504855909140602, 'left_e0': -0.5898156129419416, 
-					'left_e1': 2.137602227918324, 'left_s0': 0.048703890015361885, 'left_s1': -1.3794322235059584}
+	# Alternative pose with hands pointing downward:
+	# elif pose == "baxter":
+	# 	rangles = {'right_s0': 0.01572330307582549, 'right_s1': -1.3222914391572267, 'right_w0': -0.055223308363874894, 'right_w1': 0.4640291883353377, 
+	# 				'right_w2': -0.0030679615757708274, 'right_e0': 0.3976845192592935, 'right_e1': 2.1533255309941497}
+
+	# 	langles = {'left_w0': 0.07784952498518474, 'left_w1': 0.44447093328979864, 'left_w2': 0.0011504855909140602, 'left_e0': -0.5898156129419416, 
+	# 				'left_e1': 2.137602227918324, 'left_s0': 0.048703890015361885, 'left_s1': -1.3794322235059584}
+	
 	else: return
 
 	right_limb.set_joint_position_speed(1)

@@ -326,11 +326,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\duration.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\RobotState.cpp" />
     <ClCompile Include="..\src\time.cpp" />
     <ClCompile Include="..\src\WindowsSocket.cpp" />
     <ClCompile Include="E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\src\Shader.cpp" />
-    <ClCompile Include="E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="E:\MY STUFF\Oculus-Baxter\zed-oculus-master\zed-oculus-master\build\ZERO_CHECK.vcxproj">
