@@ -87,8 +87,8 @@ sl::Mat zed_image_Right;
 
 int _tmain(int argc, _TCHAR * argv[]) {
 	// Wait for user to get into position to start tracking
-	printf("Commencing 8 second countdown for user to get into position...");
-	std::this_thread::sleep_for(std::chrono::milliseconds(8000));
+	printf("Commencing 5 second countdown for user to get into position...");
+	std::this_thread::sleep_for(std::chrono::milliseconds(5000));
     // Initialize SDL2's context
     SDL_Init(SDL_INIT_VIDEO);
     // Initialize Oculus' context

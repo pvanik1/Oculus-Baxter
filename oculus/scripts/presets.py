@@ -19,7 +19,7 @@ JOINT_SPEED = 1.0
 GRIP_VELOCITY = 100
 
 # Movement ranges (in meters) are determined by maximum distance of the end 
-# effector from coordinate origin in an east-west axis limb stretch.
+# effector from coordinate origin according to an east-west axis limb stretch.
 USER_MOVEMENT_RANGE = 0.8
 ROBOT_MOVEMENT_RANGE = 1.45
 FORWARD_AXIS_CORRECTION = 1.1 # arbitrary value to make it less exhausting for the user to operate with arms forwards
@@ -32,12 +32,12 @@ USER_MAPPING_MULTIPLIER = ROBOT_MOVEMENT_RANGE / USER_MOVEMENT_RANGE
 
 # Measurements to determine correct placement of the origin of Oculus Rift coordinate 
 # frame. Based on east-west axis limb stretch
-ROBOT_STRETCHED_Z = 0.32 # Up-down axis coordinate of the end effector with limbs stretched
-USER_STRETCHED_Z = abs(-0.3) # Up-down axis coordinate of Oculus Touch with limbs stretched. Origin = Oculus Rift HMD.
+ROBOT_SHOULDER_TO_ORIGIN = 0.32 # Up-down axis coordinate of the end effector with limbs stretched
+OCULUS_STRETCHED_Z = abs(-0.3) # Up-down axis coordinate of Oculus Touch with limbs stretched. Origin = Oculus Rift HMD.
 def CALC_OFFSET():
-	alpha=math.atan(ROBOT_STRETCHED_Z / ROBOT_MOVEMENT_RANGE)
+	alpha=math.atan(ROBOT_SHOULDER_TO_ORIGIN / ROBOT_MOVEMENT_RANGE)
 	user_shoulder_to_origin_z = math.tan(alpha) * USER_MOVEMENT_RANGE
-	return (user_shoulder_to_origin_z + USER_STRETCHED_Z)
+	return (user_shoulder_to_origin_z + OCULUS_STRETCHED_Z)
 OCULUS_ORIGIN_Y_ADJUSTMENT = CALC_OFFSET()
 
 # System path to the image displayed on Baxter's display

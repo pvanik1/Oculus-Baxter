@@ -206,12 +206,12 @@ namespace sl {
         /**
         \brief Default constructor, set all parameters to their default and optimized values.
         */
-        InitParameters(RESOLUTION camera_resolution_ = RESOLUTION_VGA,
+        InitParameters(RESOLUTION camera_resolution_ = RESOLUTION_HD720,
                        int camera_fps_ = 0,
                        int camera_linux_id_ = 0,
                        sl::String svo_input_filename_ = sl::String(),
                        bool svo_real_time_mode_ = false,
-                       DEPTH_MODE depth_mode_ = DEPTH_MODE_PERFORMANCE,
+                       DEPTH_MODE depth_mode_ = DEPTH_MODE_QUALITY,
                        UNIT coordinate_units_ = UNIT_MILLIMETER,
                        COORDINATE_SYSTEM coordinate_system_ = COORDINATE_SYSTEM_IMAGE,
                        bool sdk_verbose_ = false,

@@ -7,12 +7,14 @@ import rospy
 import baxter_interface
 
 import presets
-import fun
 import iksolver
 import robot
 import subscribers
 
 import copy
+
+import csv
+import time
 
 def add_roll(current_joint_angles, initial_angle, limb):
 	if limb == 'right':
@@ -74,7 +76,7 @@ def check_roll_left():
 
 
 if __name__ == '__main__':
-	# Initialize the ROS node and enable robot
+	# # Initialize the ROS node and enable robot
 	rospy.init_node("Oculus_Baxter")
 	rospy.sleep(0.5)
 	rs = baxter_interface.RobotEnable()
@@ -91,7 +93,7 @@ if __name__ == '__main__':
 	# Flags for "roll mode"
 	RH_rolling = False
 	LH_rolling = False
-
+		
 	while not rospy.is_shutdown():
 
 		while not robot.poseGoalReached():
@@ -103,5 +105,6 @@ if __name__ == '__main__':
 				roll('right')
 				RH_rolling = True
 				check_roll_left()
+
 	# quit
 	quit()
