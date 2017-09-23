@@ -6,7 +6,7 @@ Video: https://www.youtube.com/watch?v=S6BM3BfwyAY
 Application files:
 Oculus_ZED_Baxter - Windows-side application (Visual Studio) for outputting ZED video and publishing Oculus poses.
 oculus - Ubuntu-side application (Catkin package) for processing pose data and issuing Baxter joint commands.
-dependencies - files required for the Windows application that need to be linked in Visual Studio. See below for version details.
+dependencies - files required for the Windows application that need to be linked in Visual Studio. See below for version details. d
 
 Additional redundant files:
 Oculus_ROS - standalone Visual Studio application for displaying tracking data.
