@@ -1,6 +1,7 @@
 # Oculus-Baxter
 Oculus Rift + Touch teleoperation of the Baxter robot using the ZED camera. Implements Stereolabs Zed Oculus Viewer:
 https://github.com/stereolabs/zed-oculus
+
 Video: https://www.youtube.com/watch?v=S6BM3BfwyAY
 
 Application files:
@@ -12,7 +13,9 @@ oculus - Ubuntu-side application (Catkin package) for processing pose data and i
 dependencies - files required for the Windows application that need to be linked in Visual Studio. See below for version details.
 
 Additional redundant files:
+
 Oculus_ROS - standalone Visual Studio application for displaying tracking data.
+
 zed-oculus-master - standalone Visual Studio application for outputting ZED video (Stereolabs' ZED viewer)
 
 How to run the system, assuming Oculus sensors are set up and Oculus Home is running:
@@ -40,9 +43,9 @@ How to build the system:
 5. Link all the required dependencies in Visual Studio. In Solution explorer, right click on the Oculus_ZED_Baxter project and click "Set as startup project". Right click again and click Properties. Set configuration to Release x64 and do the following under the tabs:
 5.1. VC++ Directories
 5.1.1. Include Directories -> with New Line, put in full paths to: 
-        \ros_lib
-        OculusSDK\LibOVR\Include 
-        \SDL 2.x\include
+       - \ros_lib
+       - OculusSDK\LibOVR\Include 
+       - \SDL 2.x\include
 5.1.2. Library Directories -> paths to LibOVR\lib\Windows\x64\Release\[Visual Studio version you are using]
 5.2. C/C++
 5.2.1. Additional include directories -> paths to:
