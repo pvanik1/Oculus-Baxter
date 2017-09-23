@@ -39,16 +39,18 @@ How to build the system:
 1. Install all dependencies.
 2. Create a catkin package called oculus with the files in the oculus folder
 3. Set the path to the head display image accordingly in presets.py
-4. Copy the Oculus_ZED_Baxter and dependencies folders to your desired folder. The VS project is based on Stereolabs' ZED Oculus Viewer, so if there is an issue (e.g. with CMakeLists.txt paths), follow their instructions to create the Viewer application. Then put the additional header and cpp files from Oculus_ZED_Baxter to the ZED Viewer folders (/include, /src).
+4. Copy the Oculus_ZED_Baxter and dependencies folders to your desired folder. The VS project is based on Stereolabs' ZED Oculus Viewer, so if there is an issue (e.g. with CMakeLists.txt paths), follow their instructions to create the Viewer application. Then put the additional header and cpp files from Oculus_ZED_Baxter to the ZED Viewer folders (\include, \src).
 5. Link all the required dependencies in Visual Studio. In Solution explorer, right click on the Oculus_ZED_Baxter project and click "Set as startup project". Right click again and click Properties. Set configuration to Release x64 and do the following under the tabs:
 5.1. VC++ Directories
 5.1.1. Include Directories -> with New Line, put in full paths to: 
-       - \ros_lib
-       - OculusSDK\LibOVR\Include 
-       - \SDL 2.x\include
+      
+       \ros_lib
+       OculusSDK\LibOVR\Include 
+       \SDL 2.x\include
 5.1.2. Library Directories -> paths to LibOVR\lib\Windows\x64\Release\[Visual Studio version you are using]
 5.2. C/C++
 5.2.1. Additional include directories -> paths to:
+      
       \glm
       C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include
       E:\...\Oculus-Baxter\Oculus_ZED_Baxter\Oculus_ZED_Baxter\include
@@ -56,10 +58,12 @@ How to build the system:
       \ZED SDK\include
 5.3. Linker
 5.3.1. General -> Additional library directories -> paths to:
+      
       \ZED SDK\lib
       \ZED SDK\dependencies\freeglut
       \ZED SDK\dependencies\glew
 5.3.2. Input -> the names of the following lib files, or their system paths:
+      
       sl_zed64.lib
       sl_core64.lib
       sl_scanning64.lib
@@ -77,14 +81,16 @@ How to build the system:
       C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\nppi.lib
       C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\npps.lib
       
-System dependencies along with versions used (Windows IDE was Visual Studio 2015 Enteprise with update 3 (64-bit):
+System dependencies with versions used (Windows IDE was Visual Studio 2015 Enteprise with update 3 (64-bit):
 a) Ubuntu (16.04)
-ROS Kinetic
-Baxter SDK 1.2.0
+       
+       ROS Kinetic
+       Baxter SDK 1.2.0
 b) Windows (10 64-bit)
-Oculus SDK 1.15 https://developer.oculus.com/downloads/package/oculus-sdk-for-windows/1.8.0/
-GLM 0.9.4 https://glm.g-truc.net/0.9.8/index.html
-Rosserial Windows http://wiki.ros.org/rosserial_windows/
-ZED SDK 2.1 https://www.stereolabs.com/developers/
-CUDA 8 with patch 2 https://developer.nvidia.com/cuda-downloads
-SDL 2.0.5 https://www.libsdl.org/download-2.0.php
+       
+       Oculus SDK 1.15 https://developer.oculus.com/downloads/package/oculus-sdk-for-windows/1.8.0/
+       GLM 0.9.4 https://glm.g-truc.net/0.9.8/index.html
+       Rosserial Windows http://wiki.ros.org/rosserial_windows/
+       ZED SDK 2.1 https://www.stereolabs.com/developers/
+       CUDA 8 with patch 2 https://developer.nvidia.com/cuda-downloads
+       SDL 2.0.5 https://www.libsdl.org/download-2.0.php
