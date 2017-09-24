@@ -43,12 +43,13 @@ Entire arm can sometimes get stuck during roll mode, once desired rotation excee
 5. Link all the required dependencies in Visual Studio. In Solution explorer, right click on the Oculus_ZED_Baxter project and click "Set as startup project". Right click again and click Properties. Set configuration to Release x64 and do the following under the tabs:
 
    5.1. VC++ Directories
-         5.1.1. Include Directories -> with New Line, put in full paths to:    
+
+   &nbsp;&nbsp;&nbsp;5.1.1. Include Directories -> with New Line, put in full paths to:    
            
        \ros_lib
        \OculusSDK\LibOVR\Include 
        \SDL 2.x\include
-   5.1.2. Library Directories -> paths to 
+   &nbsp;&nbsp;&nbsp;5.1.2. Library Directories -> paths to 
        
        \LibOVR\lib\Windows\x64\Release\[Visual Studio version you are using]
    5.2. C/C++
