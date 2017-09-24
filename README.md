@@ -1,6 +1,5 @@
 # Oculus-Baxter
-Oculus Rift + Touch teleoperation of the Baxter robot using the ZED camera. Implements Stereolabs Zed Oculus Viewer:
-https://github.com/stereolabs/zed-oculus
+Oculus Rift + Touch teleoperation of the Baxter robot using the ZED camera. Implements [Stereolabs' Zed Oculus Viewer.](https://github.com/stereolabs/zed-oculus)
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=S6BM3BfwyAY
 " target="_blank"><img src="http://img.youtube.com/vi/S6BM3BfwyAY/0.jpg" 
@@ -35,13 +34,13 @@ Assuming Oculus sensors are set up and Oculus Home is running:
 - make sure the length of the operator's arms is set in presets.py
 
 #### Known issue: 
-Entire arm can sometimes get stuck during roll mode, once desired rotation exceeds maximum possible rotation. This has only started happening when an error in the Rosserial terminal started appearing (despite restarts). No modifications were made to the code that would cause this error to suddenly appear.
+Entire arm can sometimes get stuck during roll mode, once desired rotation exceeds maximum possible rotation. This has only started happening when a non-breaking error in the Rosserial terminal started appearing (despite restarts). The reason for the error is unknown, because no modifications were made to the code when it suddenly started appearing.
 
 ### How to build the system:
 1. Install all dependencies.
 2. Create a catkin package called oculus with the files in the oculus folder
 3. Set the path to the head display image accordingly in presets.py
-4. Copy the Oculus_ZED_Baxter and dependencies folders to your desired folder. The VS project is based on Stereolabs' ZED Oculus Viewer, so if there is an issue (e.g. with CMakeLists.txt paths), follow their instructions to create the Viewer application. Then put the additional header and cpp files from Oculus_ZED_Baxter to the ZED Viewer folders (\include, \src).
+4. Copy the Oculus_ZED_Baxter and dependencies folders to your desired folder. The VS project is based on [Stereolabs' Zed Oculus Viewer,](https://github.com/stereolabs/zed-oculus) so if there is an issue (e.g. with CMakeLists.txt paths), follow their instructions to create the Viewer application. Then put the additional header and cpp files from Oculus_ZED_Baxter to the ZED Viewer folders (\include, \src).
 5. Link all the required dependencies in Visual Studio. In Solution explorer, right click on the Oculus_ZED_Baxter project and click "Set as startup project". Right click again and click Properties. Set configuration to Release x64 and do the following under the tabs:
 
    5.1. VC++ Directories
@@ -91,15 +90,13 @@ Entire arm can sometimes get stuck during roll mode, once desired rotation excee
       
 ### System dependencies with versions used 
 a) Ubuntu (16.04)
-       
-       ROS Kinetic
-       Baxter SDK 1.2.0
+- ROS Kinetic
+- Baxter SDK 1.2.0
 b) Windows (10 64-bit)
-Developed in Visual Studio 2015 Enteprise with update 3 (64-bit)
-       
-       Oculus SDK 1.15 https://developer.oculus.com/downloads/package/oculus-sdk-for-windows/1.8.0/
-       GLM 0.9.4 https://glm.g-truc.net/0.9.8/index.html
-       Rosserial Windows http://wiki.ros.org/rosserial_windows/
-       ZED SDK 2.1 https://www.stereolabs.com/developers/
-       CUDA 8 with patch 2 https://developer.nvidia.com/cuda-downloads
-       SDL 2.0.5 https://www.libsdl.org/download-2.0.php
+Developed in Visual Studio 2015 Enteprise with update 3 (64-bit) 
+- [Oculus SDK](https://developer.oculus.com/downloads/package/oculus-sdk-for-windows/1.8.0/) 1.15 
+- [GLM](https://glm.g-truc.net/0.9.8/index.html) 0.9.4
+- [Rosserial Windows](http://wiki.ros.org/rosserial_windows/)
+- [ZED SDK](https://www.stereolabs.com/developers/) 2.1 
+- [CUDA 8 with patch 2](https://developer.nvidia.com/cuda-downloads)
+- [SDL](https://www.libsdl.org/download-2.0.php) 2.0.5
