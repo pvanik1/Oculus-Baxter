@@ -1,9 +1,8 @@
 # Oculus-Baxter
 Oculus Rift + Touch teleoperation of the Baxter robot using the ZED camera. Implements [Stereolabs' Zed Oculus Viewer.](https://github.com/stereolabs/zed-oculus)
-
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=S6BM3BfwyAY
 " target="_blank"><img src="http://img.youtube.com/vi/S6BM3BfwyAY/0.jpg" 
-alt="YouTube video of the project" width="360" height="240" border="10" /></a> 
+alt="YouTube video of the project" width="360" height="240" border="10" align="middle" /></a> 
 
 ### Application files:
 
