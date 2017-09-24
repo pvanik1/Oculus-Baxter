@@ -4,7 +4,7 @@ https://github.com/stereolabs/zed-oculus
 
 Video: https://www.youtube.com/watch?v=S6BM3BfwyAY
 
-Application files:
+### Application files:
 
 Oculus_ZED_Baxter - Windows-side application (Visual Studio) for outputting ZED video and publishing Oculus poses.
 
@@ -12,13 +12,15 @@ oculus - Ubuntu-side application (Catkin package) for processing pose data and i
 
 dependencies - files required for the Windows application that need to be linked in Visual Studio. See below for version details.
 
-Additional redundant files:
+### Additional redundant files:
 
 Oculus_ROS - standalone Visual Studio application for displaying tracking data.
 
 zed-oculus-master - standalone Visual Studio application for outputting ZED video (Stereolabs' ZED viewer)
 
-How to run the system, assuming Oculus sensors are set up and Oculus Home is running:
+### How to run the system
+Assuming Oculus sensors are set up and Oculus Home is running:
+
 1. On Ubuntu, run a Baxter shell by navigating to your ROS/Catkin workspace and running ./baxter.sh. 
 2. In a Baxter shell, run $ roslaunch rosserial_server socket.launch
 3. In a second Baxter shell, run $ rosrun oculus main.py (oculus is the name of the catkin package). This will initialise Baxter.
@@ -26,16 +28,17 @@ How to run the system, assuming Oculus sensors are set up and Oculus Home is run
 5. Put on the Rift and equip the Touch controllers. Keep looking straight ahead until you see the ZED cam video. Do not change position when using the application.
 6. Quit by stopping the processes in both terminals with ctrl+c. Rosserial socket terminal does not need to be restarted 
 
-How to use the system:
+### How to use the system:
 - press and hold index trigger buttons to control the grip of the grippers 
 - press and hold A/X buttons to activate Roll mode, where only roll rotation of the operator's wrist is replicated
 - large, sweeping movements with elbows extended are most suitable for correct pose replication
 - turn your head slowly and keep it tilted slightly donwards to prevent disorientation and motion sickness
 - make sure the length of the operator's arms is set in presets.py
 
-Known issue: Entire arm can sometimes get stuck during roll mode, once desired rotation exceeds maximum possible rotation. This has only started happening when an error in the Rosserial terminal started appearing (despite restarts). No modifications were made to the code that would cause this error to suddenly appear.
+#### Known issue: 
+Entire arm can sometimes get stuck during roll mode, once desired rotation exceeds maximum possible rotation. This has only started happening when an error in the Rosserial terminal started appearing (despite restarts). No modifications were made to the code that would cause this error to suddenly appear.
 
-How to build the system:
+### How to build the system:
 1. Install all dependencies.
 2. Create a catkin package called oculus with the files in the oculus folder
 3. Set the path to the head display image accordingly in presets.py
@@ -81,12 +84,13 @@ How to build the system:
       C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\nppi.lib
       C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\npps.lib
       
-System dependencies with versions used (Windows IDE was Visual Studio 2015 Enteprise with update 3 (64-bit):
+### System dependencies with versions used 
 a) Ubuntu (16.04)
        
        ROS Kinetic
        Baxter SDK 1.2.0
 b) Windows (10 64-bit)
+Developed in Visual Studio 2015 Enteprise with update 3 (64-bit)
        
        Oculus SDK 1.15 https://developer.oculus.com/downloads/package/oculus-sdk-for-windows/1.8.0/
        GLM 0.9.4 https://glm.g-truc.net/0.9.8/index.html
