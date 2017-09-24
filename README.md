@@ -43,44 +43,47 @@ Entire arm can sometimes get stuck during roll mode, once desired rotation excee
 5. Link all the required dependencies in Visual Studio. In Solution explorer, right click on the Oculus_ZED_Baxter project and click "Set as startup project". Right click again and click Properties. Set configuration to Release x64 and do the following under the tabs:
 
    5.1. VC++ Directories
+   
       5.1.1. Include Directories -> with New Line, put in full paths to: 
       
        \ros_lib
        \OculusSDK\LibOVR\Include 
        \SDL 2.x\include
-      5.1.2. Library Directories -> paths to LibOVR\lib\Windows\x64\Release\[Visual Studio version you are using]
+      5.1.2. Library Directories -> paths to 
+       
+       \LibOVR\lib\Windows\x64\Release\[Visual Studio version you are using]
    5.2. C/C++
       5.2.1. Additional include directories -> paths to:
       
-      \glm
-      C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include
-      E:\...\Oculus-Baxter\Oculus_ZED_Baxter\Oculus_ZED_Baxter\include
-      \ZED SDK\dependencies\glew-1.12.0\include
-      \ZED SDK\include
+       \glm
+       C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include
+       E:\...\Oculus-Baxter\Oculus_ZED_Baxter\Oculus_ZED_Baxter\include
+       \ZED SDK\dependencies\glew-1.12.0\include
+       \ZED SDK\include
    5.3. Linker
       5.3.1. General -> Additional library directories -> paths to:
       
-      \ZED SDK\lib
-      \ZED SDK\dependencies\freeglut
-      \ZED SDK\dependencies\glew
+       \ZED SDK\lib
+       \ZED SDK\dependencies\freeglut
+       \ZED SDK\dependencies\glew
       5.3.2. Input -> the names of the following lib files, or their system paths:
       
-      sl_zed64.lib
-      sl_core64.lib
-      sl_scanning64.lib
-      glu32.lib
-      opengl32.lib
-      freeglut.lib
-      glew32.lib
-      [full path]\ZED SDK\dependencies\opencv_3.1.0\x64\vc14\lib\opencv_world310.lib
-      SDL2.lib
-      SDL2main.lib
-      LibOVR.lib
-      C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\cuda.lib
-      C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\cudart.lib
-      C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\nppc.lib
-      C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\nppi.lib
-      C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\npps.lib
+       sl_zed64.lib
+       sl_core64.lib
+       sl_scanning64.lib
+       glu32.lib
+       opengl32.lib
+       freeglut.lib
+       glew32.lib
+       [full path]\ZED SDK\dependencies\opencv_3.1.0\x64\vc14\lib\opencv_world310.lib
+       SDL2.lib
+       SDL2main.lib
+       LibOVR.lib
+       C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\cuda.lib
+       C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\cudart.lib
+       C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\nppc.lib
+       C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\nppi.lib
+       C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\npps.lib
       
 ### System dependencies with versions used 
 a) Ubuntu (16.04)
