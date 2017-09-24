@@ -2,9 +2,9 @@
 Oculus Rift + Touch teleoperation of the Baxter robot using the ZED camera. Implements Stereolabs Zed Oculus Viewer:
 https://github.com/stereolabs/zed-oculus
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=S6BM3BfwyAY
 " target="_blank"><img src="http://img.youtube.com/vi/S6BM3BfwyAY/0.jpg" 
-alt="YouTube video of the project" width="360" height="240" border="10" /></a> https://www.youtube.com/watch?v=S6BM3BfwyAY
+alt="YouTube video of the project" width="360" height="240" border="10" /></a> 
 
 ### Application files:
 
@@ -55,6 +55,7 @@ Entire arm can sometimes get stuck during roll mode, once desired rotation excee
        
        \LibOVR\lib\Windows\x64\Release\[Visual Studio version you are using]
    5.2. C/C++
+   
     &nbsp;&nbsp;&nbsp;5.2.1. Additional include directories ->
       
        \glm
@@ -63,6 +64,7 @@ Entire arm can sometimes get stuck during roll mode, once desired rotation excee
        \ZED SDK\dependencies\glew-1.12.0\include
        \ZED SDK\include
    5.3. Linker
+   
     &nbsp;&nbsp;&nbsp;5.3.1. General -> Additional library directories ->
       
        \ZED SDK\lib
