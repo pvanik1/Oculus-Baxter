@@ -6,14 +6,14 @@ alt="YouTube video of the project" width="360" height="240" border="10" align="m
 
 ### Application files:
 
-Oculus_ZED_Baxter - Windows-side application (Visual Studio) for outputting ZED video and publishing Oculus poses.
-   oculus - Ubuntu-side application (Catkin package) for processing pose data and issuing Baxter joint commands.
-   dependencies - files required for the Windows application that need to be linked in Visual Studio. See below for version details.
+**Oculus_ZED_Baxter** - Windows-side application (Visual Studio) for outputting ZED video and publishing Oculus poses.
+</br>**oculus** - Ubuntu-side application (Catkin package) for processing pose data and issuing Baxter joint commands.
+</br>**dependencies** - files required for the Windows application that need to be linked in Visual Studio. See below for version details.
 
 #### Additional redundant files:
 
-Oculus_ROS - standalone Visual Studio application for displaying tracking data.
-   zed-oculus-master - standalone Visual Studio application for outputting ZED video (Stereolabs' ZED viewer)
+*Oculus_ROS* - standalone Visual Studio application for displaying tracking data.
+</br>*zed-oculus-master* - standalone Visual Studio application for outputting ZED video (Stereolabs' ZED viewer)
 
 ### How to run the system
 Assuming Oculus sensors are set up and Oculus Home is running:
@@ -91,6 +91,7 @@ Entire arm can sometimes get stuck during roll mode, once desired rotation excee
 a) Ubuntu (16.04)
 - ROS Kinetic
 - Baxter SDK 1.2.0
+
 b) Windows (10 64-bit)
 Developed in Visual Studio 2015 Enteprise with update 3 (64-bit) 
 - [Oculus SDK](https://developer.oculus.com/downloads/package/oculus-sdk-for-windows/1.8.0/) 1.15 
