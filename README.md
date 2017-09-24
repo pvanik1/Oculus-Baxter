@@ -2,7 +2,9 @@
 Oculus Rift + Touch teleoperation of the Baxter robot using the ZED camera. Implements Stereolabs Zed Oculus Viewer:
 https://github.com/stereolabs/zed-oculus
 
-Video: https://www.youtube.com/watch?v=S6BM3BfwyAY
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
+" target="_blank"><img src="http://img.youtube.com/vi/S6BM3BfwyAY/0.jpg" 
+alt="YouTube video of the project" width="360" height="240" border="10" /></a> https://www.youtube.com/watch?v=S6BM3BfwyAY
 
 ### Application files:
 
@@ -49,11 +51,11 @@ Entire arm can sometimes get stuck during roll mode, once desired rotation excee
        \ros_lib
        \OculusSDK\LibOVR\Include 
        \SDL 2.x\include
-   &nbsp;&nbsp;&nbsp;5.1.2. Library Directories -> paths to 
+   &nbsp;&nbsp;&nbsp;5.1.2. Library Directories ->
        
        \LibOVR\lib\Windows\x64\Release\[Visual Studio version you are using]
    5.2. C/C++
-      5.2.1. Additional include directories -> paths to:
+    &nbsp;&nbsp;&nbsp;5.2.1. Additional include directories ->
       
        \glm
        C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include
@@ -61,12 +63,12 @@ Entire arm can sometimes get stuck during roll mode, once desired rotation excee
        \ZED SDK\dependencies\glew-1.12.0\include
        \ZED SDK\include
    5.3. Linker
-      5.3.1. General -> Additional library directories -> paths to:
+    &nbsp;&nbsp;&nbsp;5.3.1. General -> Additional library directories ->
       
        \ZED SDK\lib
        \ZED SDK\dependencies\freeglut
        \ZED SDK\dependencies\glew
-      5.3.2. Input -> the names of the following lib files, or their system paths:
+    &nbsp;&nbsp;&nbsp;5.3.2. Input -> the names of the following lib files, or their system paths:
       
        sl_zed64.lib
        sl_core64.lib
